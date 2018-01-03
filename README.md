@@ -9,7 +9,7 @@
 
 ### Installation
 
-* Clone this repo: git@github.com:cayouetten/form-gen-tool.git
+* Clone this repo: git@github.com:nmcayouette/formGenerator.git
 
 ## Test
 
