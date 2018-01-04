@@ -1,4 +1,4 @@
-# formGenerator
+# Form Generator
 *Console application to create dynamic HTML form from array of user choices*
 
 ## Setup 
@@ -64,8 +64,8 @@ Supports types and attributes as follows:
 var inputArray = [{type:'password', name='passwordName', id='passwordID', class='passwordClass', required:'yes'}]
 ```
 
-outputs
-```html
+outputs html
+```
 <input type='email' name='user-email' id='user-email' class='user-email' required/>
 ```
 

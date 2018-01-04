@@ -1,4 +1,4 @@
-// HTML Form generation tool
+// HTML Form Generation Tool
 module.exports.formGeneration = ((userInputs) => {
   // String to hold form
   let formString = '';
