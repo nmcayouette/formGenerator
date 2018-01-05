@@ -1,7 +1,19 @@
-// HTML Form generation tool
+// HTML Form Generation Tool
 module.exports.formGeneration = ((userInputs) => {
   // String to hold form
   let formString = '';
+
+  // Add attributes if available
+  let attributes = (input) => {
+    let attribute = input.for ? ` for="${input.for}"` : '';
+    attribute += input.name ? ` name="${input.name}"` : '';
+    attribute += input.id ? ` id="${input.id}"` : '';
+    attribute += input.class ? ` class="${input.class}"` : '';
+    attribute += input.value ? ` value="${input.value}"` : '';
+    attribute += input.required ? ' required "' : '';
+
+    return attribute;
+  }
 
   // For each input in user input array
   userInputs.forEach((input) => {
@@ -11,65 +23,45 @@ module.exports.formGeneration = ((userInputs) => {
         formString += '<label';
 
         // ADD attributes if present
-        formString += input.for ? ` for="${input.for}"` : '';
-        formString += input.name ? ` name="${input.name}"` : '';
-        formString += input.id ? ` id="${input.id}"` : '';
-        formString += input.class ? ` class="${input.class}"` : '';
-        formString += input.value ? ` value="${input.value}"` : '';
+				formString += attributes(input);
 
-        formString += '></label>';
+        formString += '></label>\n';
 
         break;
 
       case 'text':
         formString += '<input type="text"';
 
-        formString += input.name ? ` name="${input.name}"` : '';
-        formString += input.id ? ` id="${input.id}"` : '';
-        formString += input.class ? ` class="${input.class}"` : '';
-        formString += input.value ? ` value="${input.value}"` : '';
-        formString += input.required ? ' required "' : '';
+        formString += attributes(input);
 
-        formString += '/>';
+        formString += '/>\n';
 
         break;
 
       case 'email':
         formString += '<input type="email"';
 
-        formString += input.name ? ` name="${input.name}"` : '';
-        formString += input.id ? ` id="${input.id}"` : '';
-        formString += input.class ? ` class="${input.class}"` : '';
-        formString += input.value ? ` value="${input.value}"` : '';
-        formString += input.required ? ' required "' : '';
+				formString += attributes(input);
 
-        formString += '/>';
+        formString += '/>\n';
 
         break;
 
       case 'password':
         formString += '<input type="password"';
 
-        formString += input.name ? ` name="${input.name}"` : '';
-        formString += input.id ? ` id="${input.id}"` : '';
-        formString += input.class ? ` class="${input.class}"` : '';
-        formString += input.value ? ` value="${input.value}"` : '';
-        formString += input.required ? ' required "' : '';
+        formString += attributes(input);
 
-        formString += '/>';
+        formString += '/>\n';
 
         break;
 
       case 'submit':
         formString += '<input type="submit"';
 
-        formString += input.name ? ` name="${input.name}"` : '';
-        formString += input.id ? ` id="${input.id}"` : '';
-        formString += input.class ? ` class="${input.class}"` : '';
-        formString += input.value ? ` value="${input.value}"` : '';
-        formString += input.required ? ' required "' : '';
+        formString += attributes(input);
 
-        formString += '/>';
+        formString += '/>\n';
 
         break;
 

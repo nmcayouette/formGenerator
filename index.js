@@ -48,4 +48,4 @@ const test = [{
 
 // Ignore console.log fail for this app's purposes
 // eslint-disable-next-line no-console
-console.log('HTML Output Results of Form: ', formTool.formGeneration(test));
+console.log('HTML Form Results: \n', formTool.formGeneration(test));
