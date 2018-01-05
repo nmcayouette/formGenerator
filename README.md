@@ -61,7 +61,7 @@ Supports types and attributes as follows:
 ### Example
 
 ```javascript
-var inputArray = [{type:'password', name='passwordName', id='passwordID', class='passwordClass', required:'yes'}]
+var inputArray = [{type:'password', name='passwordName', id='passwordID', class='passwordClass', required:true}]
 ```
 
 outputs html
