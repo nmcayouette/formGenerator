@@ -4,7 +4,7 @@ module.exports.formGeneration = ((userInputs) => {
   let formString = '';
 
   // Add attributes if available
-  let attributes = (input) => {
+  const attributes = (input) => {
     let attribute = input.for ? ` for="${input.for}"` : '';
     attribute += input.name ? ` name="${input.name}"` : '';
     attribute += input.id ? ` id="${input.id}"` : '';
@@ -13,7 +13,7 @@ module.exports.formGeneration = ((userInputs) => {
     attribute += input.required ? ' required "' : '';
 
     return attribute;
-  }
+  };
 
   // For each input in user input array
   userInputs.forEach((input) => {
@@ -23,7 +23,7 @@ module.exports.formGeneration = ((userInputs) => {
         formString += '<label';
 
         // ADD attributes if present
-				formString += attributes(input);
+        formString += attributes(input);
 
         formString += '></label>\n';
 
@@ -41,7 +41,7 @@ module.exports.formGeneration = ((userInputs) => {
       case 'email':
         formString += '<input type="email"';
 
-				formString += attributes(input);
+        formString += attributes(input);
 
         formString += '/>\n';
 
