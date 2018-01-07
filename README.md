@@ -64,7 +64,7 @@ Supports types and attributes as follows:
 var inputArray = [{type:'password', name='passwordName', id='passwordID', class='passwordClass', required:true}]
 ```
 
-outputs html
+Outputs html:
 ```
 <input type='email' name='user-email' id='user-email' class='user-email' required/>
 ```
