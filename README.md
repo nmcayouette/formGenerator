@@ -1,18 +1,82 @@
-# Mark Langenhorst Feedback
-Nicole did a great job with the form building tool, and I was very impressed with what she had made. In fact, the only thing I could think of, as a way to shorten/clean the lines of code, was to add a function to the bottom that populates the attributes when it is called. That way if anything needs to be changed with the attributes, it only needs to be changed once rather than each time for each input tag. Other than that, I think her project was created in an efficient manner that any developer would be able to figure out and use on their own! For example, instead of using 
+# Form Generator
+*Console application to create dynamic HTML form from array of user choices*
+
+## Setup 
+
+### Dependencies
+
+* node
+
+### Installation
+
+* Clone this repo: git@github.com:nmcayouette/formGenerator.git
+
+## Test
+
+Open 'index.js' and view entered test elements
+
+`node index.js`
+
+Add your own to see more examples
+
+## Getting started
+
+`npm install`
+
+### Usage
+
+Enter array of input data objects and render an HTML formatted form
+Supports types and attributes as follows:
+1. label
+  * name
+  * for
+  * id
+  * class
+  * value
+  * required
+2. text
+  * name
+  * id
+  * class
+  * value
+  * required
+3. email
+  * name
+  * id
+  * class
+  * value
+  * required
+4. password
+  * name
+  * id
+  * class
+  * value
+  * required
+5. submit
+  * name
+  * id
+  * class
+  * value
+
+### Example
+
 ```javascript
-        formString += '<input type="text"';
-        formString += input.for ? ` for="${input.for}"` : '';
-        formString += input.name ? ` name="${input.name}"` : '';
-        formString += input.id ? ` id="${input.id}"` : '';
-        formString += input.class ? ` class="${input.class}"` : '';
-        formString += input.value ? ` value="${input.value}"` : '';
+var inputArray = [{type:'password', name='passwordName', id='passwordID', class='passwordClass', required:true}]
 ```
 
-in each case, just put that into a function and then call accordingly.
-```javascript
-        formString += '<input type="text"';
-        attributes();
+outputs html
+```
+<input type='email' name='user-email' id='user-email' class='user-email' required/>
 ```
 
-Like I said, however, she did a great job building a tool that any developer could use! Great job, Nicole!
+## Pull requests
+
+Your feedback is welcome!
+ 
+* Fork repo
+* Commit feature update
+* Send pull request with description of code
+
+## Copyright and attribution
+
+Copyright (c) 2018 Nicole Cayouette
